@@ -6,4 +6,13 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Controllers\" />
+      <Folder Include="DTO\Response\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\DungeonHub.Persistence\DungeonHub.Persistence.csproj" />
+    </ItemGroup>
+
 </Project>

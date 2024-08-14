@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonHub.Frontend", "Dung
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonHub.Persistence", "DungeonHub.Persistence\DungeonHub.Persistence.csproj", "{46E58A4B-0C2E-4300-AEF0-768FD3B69DDF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{E10A672D-0654-4F2B-B02B-2060D0F434F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{46E58A4B-0C2E-4300-AEF0-768FD3B69DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46E58A4B-0C2E-4300-AEF0-768FD3B69DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46E58A4B-0C2E-4300-AEF0-768FD3B69DDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E10A672D-0654-4F2B-B02B-2060D0F434F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E10A672D-0654-4F2B-B02B-2060D0F434F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E10A672D-0654-4F2B-B02B-2060D0F434F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E10A672D-0654-4F2B-B02B-2060D0F434F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

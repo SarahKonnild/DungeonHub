@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DungeonHub.Persistence.Models;
+namespace DungeonHub.Persistence.Models.Creature.Character;
 
 /// <summary>
 ///     Represents a character's skills.

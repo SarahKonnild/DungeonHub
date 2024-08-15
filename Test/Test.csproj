@@ -24,4 +24,10 @@
       <ProjectReference Include="..\DungeonHub.Backend\DungeonHub.Backend.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Include="DataLoaderTest\TestData\*.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
 </Project>

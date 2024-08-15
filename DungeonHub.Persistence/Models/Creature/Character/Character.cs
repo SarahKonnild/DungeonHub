@@ -1,8 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using DungeonHub.Persistence.Models.Enums;
 
-namespace DungeonHub.Persistence.Models;
+namespace DungeonHub.Persistence.Models.Creature.Character;
 
 /// <summary>
 ///     Represents a D&D character sheet.

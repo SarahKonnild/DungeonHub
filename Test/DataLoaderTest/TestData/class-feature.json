@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Feature1",
+    "description": "Description1",
+    "level": 1,
+    "class": "Class1"
+  },
+  {
+    "name": "Feature2",
+    "description": "Description2",
+    "level": 3,
+    "class": "Class2",
+    "gain-subclass-feature": true
+  },
+  {
+    "name": "Feature3",
+    "description": "Description3",
+    "level": 3,
+    "class": "Class3",
+    "is-subclass-feature": true,
+    "subclass": "Subclass1"
+  }
+]

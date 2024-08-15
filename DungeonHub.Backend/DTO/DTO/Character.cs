@@ -1,5 +1,4 @@
 using System.Text.Json.Serialization;
-using DungeonHub.Persistence.Models.Enums;
 
 namespace DungeonHub.Backend.DTO.DTO;
 
@@ -7,9 +6,6 @@ public class Character
 {
     [JsonPropertyName("name")]
     public string Name { get; set; } = string.Empty;
-    
-    [JsonPropertyName("class")]
-    public CharacterClass Class { get; set; }
     
     [JsonPropertyName("hit-points")]
     public int HitPoints { get; set; }

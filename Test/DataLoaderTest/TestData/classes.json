@@ -1,0 +1,94 @@
+[
+  {
+    "name": "Class1",
+    "hit-die": 8,
+    "saving-throws": [
+      "strength",
+      "constitution"
+    ],
+    "class-details": [
+      {
+        "level": 1,
+        "proficiency-bonus": 2,
+        "rages": 2,
+        "rage-damage": 2
+      },
+      {
+        "level": 2,
+        "proficiency-bonus": 2,
+        "rages": 2,
+        "rage-damage": 2
+      },
+      {
+        "level": 3,
+        "proficiency-bonus": 2,
+        "rages": 3,
+        "rage-damage": 2
+      }
+    ]
+  },
+  {
+    "name": "Class2",
+    "hit-die": 8,
+    "saving-throws": [
+      "dexterity",
+      "charisma"
+    ],
+    "class-details": [
+      {
+        "level": 1,
+        "proficiency-bonus": 2,
+        "cantrips-known": 2,
+        "spells-known": 4,
+        "1st-level-spells": 2
+      },
+      {
+        "level": 2,
+        "proficiency-bonus": 2,
+        "cantrips-known": 2,
+        "spells-known": 5,
+        "1st-level-spells": 3
+      },
+      {
+        "level": 3,
+        "proficiency-bonus": 2,
+        "cantrips-known": 2,
+        "spells-known": 6,
+        "1st-level-spells": 4,
+        "2nd-level-spells": 2
+      }
+    ]
+  },
+  {
+    "name": "Class3",
+    "hit-die": 4,
+    "saving-throws": [
+      "strength",
+      "intelligence"
+    ],
+    "class-details": [
+      {
+        "level": 1,
+        "proficiency-bonus": 2,
+        "martial-arts": 4,
+        "ki-points": 0,
+        "unarmored-movement": 0,
+        "sneak-attack-dice": 1,
+        "sorcery-points": 1,
+        "invocations-known": 1,
+        "slot-level": 1
+      },
+      {
+        "level": 2,
+        "proficiency-bonus": 2,
+        "martial-arts": 4,
+        "ki-points": 2,
+        "unarmored-movement": 2,
+        "sneak-attack-dice": 2,
+        "sorcery-points": 2,
+        "invocations-known": 2,
+        "slot-level": 2
+      }
+    ]
+  }
+]

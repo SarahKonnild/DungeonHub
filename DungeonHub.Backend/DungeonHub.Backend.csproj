@@ -4,16 +4,20 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <RootNamespace>DungeonHub.Persistence</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers\" />
-      <Folder Include="DTO\Request\" />
-      <Folder Include="DTO\Response\" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.8" />
+      <PackageReference Include="System.IO.Abstractions" Version="21.0.29" />
     </ItemGroup>
-
+    
     <ItemGroup>
-      <ProjectReference Include="..\DungeonHub.Persistence\DungeonHub.Persistence.csproj" />
+        <Content Include="Data/*.json" CopyToOutputDirectory="Always"/>
     </ItemGroup>
-
 </Project>

@@ -1,3 +1,6 @@
-namespace DungeonHub.Persistence.Repository;
+using Microsoft.Extensions.Logging;
 
-public partial class Repository(DungeonHubDbContext dungeonHubDbContext) : IRepository;
+namespace DungeonHub.Backend.Repository;
+
+/// <inheritdoc />
+public partial class Repository(ILogger<Repository> logger, DungeonHubDbContext dungeonHubDbContext) : IRepository;

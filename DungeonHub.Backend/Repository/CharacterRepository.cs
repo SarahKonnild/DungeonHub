@@ -16,20 +16,31 @@ public partial class Repository
     /// <inheritdoc />
     public PlayerCharacter? GetPlayerCharacterById(int id)
     {
-        return dungeonHubDbContext.PlayerCharacters.Find(id);
+        var foundCharacter = dungeonHubDbContext.PlayerCharacters.FirstOrDefault(character => character.Id == id);
+        if (foundCharacter is null)
+        {
+            logger.LogWarning("Could not find character with ID {Id}.", id);
+        }
+
+        return foundCharacter;
     }
 
     /// <inheritdoc />
     public void UpdatePlayerCharacter(PlayerCharacter updatedPlayerCharacter)
     {
-        dungeonHubDbContext.Entry(updatedPlayerCharacter).State = EntityState.Modified;
-        dungeonHubDbContext.SaveChanges();
+        var existingCharacter = dungeonHubDbContext.PlayerCharacters.Find(updatedPlayerCharacter.Id);
+        if (existingCharacter != null)
+        {
+            dungeonHubDbContext.Entry(existingCharacter).CurrentValues.SetValues(updatedPlayerCharacter);
+            dungeonHubDbContext.SaveChanges();
+        }
+        logger.LogWarning("Tried to update character with ID {Id}, but it was not found.", updatedPlayerCharacter.Id);
     }
 
     /// <inheritdoc />
     public void DeletePlayerCharacter(int id)
     {
-        var playerCharacter = GetPlayerCharacterById(id);
+        var playerCharacter = dungeonHubDbContext.PlayerCharacters.Find(id);
         if (playerCharacter != null)
         {
             dungeonHubDbContext.PlayerCharacters.Remove(playerCharacter);

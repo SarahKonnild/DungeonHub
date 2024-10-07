@@ -1,26 +1,11 @@
-using DungeonHub.Persistence.Models.Creature;
-using DungeonHub.Persistence.Models.Creature.Character;
+using DungeonHub.Backend.Models.Creature.Character;
 using Microsoft.EntityFrameworkCore;
 
-namespace DungeonHub.Persistence;
+namespace DungeonHub.Backend;
 
 public class DungeonHubDbContext : DbContext
 {
-    public DbSet<Character> Characters { get; set; }
-    
-    public DbSet<CharacterClass> CharacterClasses { get; set; }
-    
-    public DbSet<CharacterSubclass> CharacterSubclasses { get; set; }
-    
-    public DbSet<Feature> Features { get; set; }
-    
-    public DbSet<CharacterSkills> CharacterSkills { get; set; }
-    
-    public DbSet<AbilityScores> AbilityScores { get; set; }
-    
-    public DbSet<SavingThrows> SavingThrows { get; set; }
-    
-    public DbSet<ClassDetail> ClassDetails { get; set; }
+    public DbSet<PlayerCharacter> PlayerCharacters { get; set; }
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

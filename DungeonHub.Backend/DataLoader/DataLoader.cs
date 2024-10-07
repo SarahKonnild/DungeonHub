@@ -1,6 +1,6 @@
 using System.IO.Abstractions;
 
-namespace DungeonHub.Persistence.DataLoader;
+namespace DungeonHub.Backend.DataLoader;
 
 /// <summary>
 ///     Loads the data from the Data-folder into the database.

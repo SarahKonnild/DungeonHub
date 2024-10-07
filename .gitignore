@@ -1,4 +1,4 @@
 **/bin
 **/obj
 .idea
-DungeonHub.Backend/Data
+DungeonHub.Backend/Data/*.json

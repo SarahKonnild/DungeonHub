@@ -33,8 +33,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Backend\RepositoryTests\" />
+      <Folder Include="Backend\RepositoryTests\TestDb\" />
       <Folder Include="Integration\" />
+      <Folder Include="Web\" />
     </ItemGroup>
 
     <ItemGroup>

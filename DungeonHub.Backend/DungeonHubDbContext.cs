@@ -1,9 +1,11 @@
 using DungeonHub.Backend.Models.Creature.Character;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace DungeonHub.Backend;
 
-public class DungeonHubDbContext : DbContext
+public class DungeonHubDbContext : IdentityDbContext<IdentityUser>
 {
     public DbSet<PlayerCharacter> PlayerCharacters { get; set; }
 

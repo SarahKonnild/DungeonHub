@@ -3,16 +3,19 @@ using System;
 using DungeonHub.Backend;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace DungeonHub.Persistence.Migrations
+namespace DungeonHub.Backend.Migrations
 {
     [DbContext(typeof(DungeonHubDbContext))]
-    partial class DungeonHubDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241007190654_AddPlayerCharacterMetaData")]
+    partial class AddPlayerCharacterMetaData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.8");

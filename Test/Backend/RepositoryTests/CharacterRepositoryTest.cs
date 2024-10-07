@@ -1,4 +1,5 @@
 using DungeonHub.Backend.Models.Creature.Character;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using NSubstitute;
 using Test.TestExtensions;
@@ -116,6 +117,17 @@ public partial class RepositoryTest
         receivedCalls.First().AssertLoggedLevelAndMessage(LogLevel.Warning, "Tried to remove character with ID 1, but it was not found.");
     }
 
+    private static IdentityUser GetSarahIdentityUser()
+    {
+        return new IdentityUser
+        {
+            UserName = "SarahKnapp",
+            Email = "not-sarahs-email@gmail.com",
+            EmailConfirmed = false,
+            PhoneNumber = "not-a-phone-number"
+        };
+    }
+
     private static PlayerCharacter GetNiamhPlayerCharacter()
     {
         return new PlayerCharacter
@@ -136,7 +148,8 @@ public partial class RepositoryTest
             Constitution = 12,
             Wisdom = 18,
             Charisma = 14,
-            Speed = 35
+            Speed = 35,
+            User = GetSarahIdentityUser()
         };
     }
 }

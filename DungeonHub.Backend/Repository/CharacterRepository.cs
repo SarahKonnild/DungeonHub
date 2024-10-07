@@ -9,6 +9,8 @@ public partial class Repository
     /// <inheritdoc />
     public void CreatePlayerCharacter(PlayerCharacter playerCharacter)
     {
+        playerCharacter.Created = DateTime.UtcNow;
+        playerCharacter.Modified = playerCharacter.Created;
         dungeonHubDbContext.PlayerCharacters.Add(playerCharacter);
         dungeonHubDbContext.SaveChanges();
     }
@@ -31,6 +33,7 @@ public partial class Repository
         var existingCharacter = dungeonHubDbContext.PlayerCharacters.Find(updatedPlayerCharacter.Id);
         if (existingCharacter != null)
         {
+            updatedPlayerCharacter.Modified = DateTime.UtcNow;
             dungeonHubDbContext.Entry(existingCharacter).CurrentValues.SetValues(updatedPlayerCharacter);
             dungeonHubDbContext.SaveChanges();
         }

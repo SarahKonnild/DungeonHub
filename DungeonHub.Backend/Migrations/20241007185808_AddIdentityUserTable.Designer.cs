@@ -3,16 +3,19 @@ using System;
 using DungeonHub.Backend;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace DungeonHub.Persistence.Migrations
+namespace DungeonHub.Backend.Migrations
 {
     [DbContext(typeof(DungeonHubDbContext))]
-    partial class DungeonHubDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241007185808_AddIdentityUserTable")]
+    partial class AddIdentityUserTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.8");
@@ -42,10 +45,6 @@ namespace DungeonHub.Persistence.Migrations
                     b.Property<int>("Constitution")
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("Created")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
                     b.Property<int>("CurrentHealth")
                         .HasColumnType("INTEGER");
 
@@ -60,10 +59,6 @@ namespace DungeonHub.Persistence.Migrations
 
                     b.Property<int>("MaxHealth")
                         .HasColumnType("INTEGER");
-
-                    b.Property<DateTime>("Modified")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -89,15 +84,10 @@ namespace DungeonHub.Persistence.Migrations
                     b.Property<int>("TemporaryHealth")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("UserId")
-                        .HasColumnType("TEXT");
-
                     b.Property<int>("Wisdom")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("PlayerCharacters");
                 });
@@ -292,15 +282,6 @@ namespace DungeonHub.Persistence.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
-                });
-
-            modelBuilder.Entity("DungeonHub.Backend.Models.Creature.Character.PlayerCharacter", b =>
-                {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

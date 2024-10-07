@@ -1,10 +1,13 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace DungeonHub.Backend.Models.Creature.Character;
 
 public class PlayerCharacter
 {
+    #region Basic Character Information
+
     /// <summary>
     ///     Unique database-generated ID.
     /// </summary>
@@ -59,13 +62,21 @@ public class PlayerCharacter
     /// <summary>
     ///     The player character's temporary health.
     /// </summary>
-    public required int TemporaryHealth { get; set; } = 0;
+    public required int TemporaryHealth { get; set; }
     
     /// <summary>
     ///     The player character's armor class.
     /// </summary>
     public required int ArmorClass { get; set; }
+    
+    /// <summary>
+    ///     The player character's movement speed.
+    /// </summary>
+    public required int Speed { get; set; }
+    
+    #endregion
 
+    #region Character Stats
     /// <summary>
     ///     The player character's strength score.
     /// </summary>
@@ -96,8 +107,24 @@ public class PlayerCharacter
     /// </summary>
     public required int Charisma { get; set; }
     
+    #endregion
+
+    #region Character Metadata
+
     /// <summary>
-    ///     The player character's movement speed.
+    ///     The user the character belongs to.
     /// </summary>
-    public required int Speed { get; set; }
+    public required IdentityUser User { get; set; }
+    
+    /// <summary>
+    ///     The time and date the character was created.
+    /// </summary>
+    public DateTime Created { get; set; }
+    
+    /// <summary>
+    ///     The time and date the character was last modified.
+    /// </summary>
+    public DateTime Modified { get; set; }
+
+    #endregion
 }

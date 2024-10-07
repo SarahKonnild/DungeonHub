@@ -1,8 +1,14 @@
+using DungeonHub.Backend;
 using DungeonHub.Web.Components;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<DungeonHubDbContext>()
+    .AddDefaultTokenProviders();
+
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 

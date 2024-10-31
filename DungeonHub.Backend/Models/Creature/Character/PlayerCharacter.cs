@@ -4,22 +4,9 @@ using Microsoft.AspNetCore.Identity;
 
 namespace DungeonHub.Backend.Models.Creature.Character;
 
-public class PlayerCharacter
+public class PlayerCharacter : Creature
 {
     #region Basic Character Information
-
-    /// <summary>
-    ///     Unique database-generated ID.
-    /// </summary>
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int Id { get; set; }
-
-    /// <summary>
-    ///     The name of the player character.
-    /// </summary>
-    [MaxLength(250)]
-    public required string Name { get; set; } = string.Empty;
-
     /// <summary>
     ///     The player character's race.
     /// </summary>
@@ -50,11 +37,6 @@ public class PlayerCharacter
     public required int Level { get; set; }
 
     /// <summary>
-    ///     The player character's maximum available health.
-    /// </summary>
-    public required int MaxHealth { get; set; }
-
-    /// <summary>
     ///     The player character's current health.
     /// </summary>
     public required int CurrentHealth { get; set; }
@@ -63,50 +45,6 @@ public class PlayerCharacter
     ///     The player character's temporary health.
     /// </summary>
     public required int TemporaryHealth { get; set; }
-    
-    /// <summary>
-    ///     The player character's armor class.
-    /// </summary>
-    public required int ArmorClass { get; set; }
-    
-    /// <summary>
-    ///     The player character's movement speed.
-    /// </summary>
-    public required int Speed { get; set; }
-    
-    #endregion
-
-    #region Character Stats
-    /// <summary>
-    ///     The player character's strength score.
-    /// </summary>
-    public required int Strength { get; set; }
-
-    /// <summary>
-    ///     The player character's dexterity score.
-    /// </summary>
-    public required int Dexterity { get; set; }
-
-    /// <summary>
-    ///     The player character's intelligence score.
-    /// </summary>
-    public required int Intelligence { get; set; }
-    
-    /// <summary>
-    ///     The player character's constitution score.
-    /// </summary>
-    public required int Constitution { get; set; }
-    
-    /// <summary>
-    ///     The player character's wisdom score.
-    /// </summary>
-    public required int Wisdom { get; set; }
-    
-    /// <summary>
-    ///     The player character's charisma score.
-    /// </summary>
-    public required int Charisma { get; set; }
-    
     #endregion
 
     #region Character Metadata

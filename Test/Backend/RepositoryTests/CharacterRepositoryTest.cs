@@ -1,3 +1,4 @@
+using DungeonHub.Backend.Models.Creature;
 using DungeonHub.Backend.Models.Creature.Character;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
@@ -138,7 +139,9 @@ public partial class RepositoryTest
             Class = "Druid",
             Subclass = "Circle of the Moon",
             Level = 10,
-            MaxHealth = 88,
+            Health = 88,
+            Initiative = 2,
+            Size = CreatureSize.Medium,
             CurrentHealth = 60,
             TemporaryHealth = 0,
             ArmorClass = 13,

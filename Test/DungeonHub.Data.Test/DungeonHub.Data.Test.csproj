@@ -39,8 +39,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\DungeonHub.Data\DungeonHub.Data.csproj" />
-      <ProjectReference Include="..\DungeonHub.Client\DungeonHub.Client.csproj" />
+      <ProjectReference Include="..\..\App\DungeonHub.Data\DungeonHub.Data.csproj" />
       <ProjectReference Include="..\TestHelpers\TestHelpers.csproj" />
     </ItemGroup>
 

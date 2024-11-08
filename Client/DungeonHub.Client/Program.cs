@@ -1,5 +1,5 @@
 using DungeonHub.Backend;
-using DungeonHub.Web.Components;
+using DungeonHub.Client.Components;
 using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);

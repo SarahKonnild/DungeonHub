@@ -2,7 +2,7 @@ using DungeonHub.Web.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DungeonHub.Web.Controllers;
+namespace DungeonHub.Client.Controllers;
 
 public class UserController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager) : Controller
 {

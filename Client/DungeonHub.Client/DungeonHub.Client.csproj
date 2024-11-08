@@ -4,11 +4,11 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>DungeonHub.Web</RootNamespace>
+    <RootNamespace>DungeonHub.Client</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DungeonHub.Data\DungeonHub.Data.csproj" />
+    <ProjectReference Include="..\..\App\DungeonHub.Data\DungeonHub.Data.csproj" />
   </ItemGroup>
 
 </Project>

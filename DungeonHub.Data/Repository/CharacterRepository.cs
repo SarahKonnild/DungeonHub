@@ -36,6 +36,7 @@ public partial class Repository
             updatedPlayerCharacter.Modified = DateTime.UtcNow;
             dungeonHubDbContext.Entry(existingCharacter).CurrentValues.SetValues(updatedPlayerCharacter);
             dungeonHubDbContext.SaveChanges();
+            return;
         }
         logger.LogWarning("Tried to update character with ID {Id}, but it was not found.", updatedPlayerCharacter.Id);
     }
@@ -48,6 +49,7 @@ public partial class Repository
         {
             dungeonHubDbContext.PlayerCharacters.Remove(playerCharacter);
             dungeonHubDbContext.SaveChanges();
+            return;
         }
         logger.LogWarning("Tried to remove character with ID {Id}, but it was not found.", id);
     }

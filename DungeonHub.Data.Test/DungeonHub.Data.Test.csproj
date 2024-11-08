@@ -7,6 +7,7 @@
 
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
+        <RootNamespace>Test</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -39,12 +40,12 @@
 
     <ItemGroup>
       <Folder Include="Integration\" />
-      <Folder Include="Web\" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\DungeonHub.Backend\DungeonHub.Backend.csproj" />
-      <ProjectReference Include="..\DungeonHub.Web\DungeonHub.Web.csproj" />
+      <ProjectReference Include="..\DungeonHub.Data\DungeonHub.Data.csproj" />
+      <ProjectReference Include="..\DungeonHub.Client\DungeonHub.Client.csproj" />
+      <ProjectReference Include="..\TestHelpers\TestHelpers.csproj" />
     </ItemGroup>
 
 </Project>

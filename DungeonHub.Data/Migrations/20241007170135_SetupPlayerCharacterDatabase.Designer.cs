@@ -19,7 +19,7 @@ namespace DungeonHub.Backend.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.8");
 
-            modelBuilder.Entity("DungeonHub.Backend.Models.Creature.Character.PlayerCharacter", b =>
+            modelBuilder.Entity("DungeonHub.Data.Models.Creature.Character.PlayerCharacter", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

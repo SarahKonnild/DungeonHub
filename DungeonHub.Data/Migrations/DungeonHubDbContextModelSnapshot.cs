@@ -3,24 +3,21 @@ using System;
 using DungeonHub.Backend;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace DungeonHub.Backend.Migrations
+namespace DungeonHub.Persistence.Migrations
 {
     [DbContext(typeof(DungeonHubDbContext))]
-    [Migration("20241031153056_UseCharacterParentClassAndAddMonster")]
-    partial class UseCharacterParentClassAndAddMonster
+    partial class DungeonHubDbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.8");
 
-            modelBuilder.Entity("DungeonHub.Backend.Models.Creature.Creature", b =>
+            modelBuilder.Entity("DungeonHub.Data.Models.Creature.Creature", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -233,9 +230,9 @@ namespace DungeonHub.Backend.Migrations
                     b.ToTable("UserTokens");
                 });
 
-            modelBuilder.Entity("DungeonHub.Backend.Models.Creature.Character.PlayerCharacter", b =>
+            modelBuilder.Entity("DungeonHub.Data.Models.Creature.Character.PlayerCharacter", b =>
                 {
-                    b.HasBaseType("DungeonHub.Backend.Models.Creature.Creature");
+                    b.HasBaseType("DungeonHub.Data.Models.Creature.Creature");
 
                     b.Property<string>("Background")
                         .IsRequired()
@@ -280,9 +277,9 @@ namespace DungeonHub.Backend.Migrations
                     b.ToTable("PlayerCharacters");
                 });
 
-            modelBuilder.Entity("DungeonHub.Backend.Models.Creature.Monster.Monster", b =>
+            modelBuilder.Entity("DungeonHub.Data.Models.Creature.Monster.Monster", b =>
                 {
-                    b.HasBaseType("DungeonHub.Backend.Models.Creature.Creature");
+                    b.HasBaseType("DungeonHub.Data.Models.Creature.Creature");
 
                     b.Property<string>("CombatRating")
                         .IsRequired()
@@ -301,7 +298,7 @@ namespace DungeonHub.Backend.Migrations
                     b.ToTable("Monsters");
                 });
 
-            modelBuilder.Entity("DungeonHub.Backend.Models.Creature.Character.PlayerCharacter", b =>
+            modelBuilder.Entity("DungeonHub.Data.Models.Creature.Character.PlayerCharacter", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
                         .WithMany()

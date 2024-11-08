@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DungeonHub.Backend\DungeonHub.Backend.csproj" />
+    <ProjectReference Include="..\DungeonHub.Data\DungeonHub.Data.csproj" />
   </ItemGroup>
 
 </Project>

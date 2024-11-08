@@ -1,5 +1,6 @@
 using Microsoft.Extensions.Logging;
 using NSubstitute.Core;
+using Xunit;
 
 namespace Test.TestExtensions;
 

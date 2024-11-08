@@ -3,11 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonHub.Web", "DungeonHub.Web\DungeonHub.Web.csproj", "{CE3A0FD4-6327-46CB-9AF8-774D47E1322F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonHub.Client", "DungeonHub.Client\DungeonHub.Client.csproj", "{CE3A0FD4-6327-46CB-9AF8-774D47E1322F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonHub.Backend", "DungeonHub.Backend\DungeonHub.Backend.csproj", "{46E58A4B-0C2E-4300-AEF0-768FD3B69DDF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonHub.Data", "DungeonHub.Data\DungeonHub.Data.csproj", "{46E58A4B-0C2E-4300-AEF0-768FD3B69DDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{E10A672D-0654-4F2B-B02B-2060D0F434F1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonHub.Data.Test", "DungeonHub.Data.Test\DungeonHub.Data.Test.csproj", "{E10A672D-0654-4F2B-B02B-2060D0F434F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{34ED692A-077E-47F6-9449-9EA0CFF88A12}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{C21ED2CB-2424-4FEE-8B65-86F6D713ABC2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{297A030D-6E00-4A47-8C06-5AED8F7C923B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHelpers", "TestHelpers\TestHelpers.csproj", "{E40EAE9B-01F5-4C5F-B3E8-EB3CDBA7A6CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +38,15 @@ Global
 		{E10A672D-0654-4F2B-B02B-2060D0F434F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E10A672D-0654-4F2B-B02B-2060D0F434F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E10A672D-0654-4F2B-B02B-2060D0F434F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E40EAE9B-01F5-4C5F-B3E8-EB3CDBA7A6CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E40EAE9B-01F5-4C5F-B3E8-EB3CDBA7A6CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E40EAE9B-01F5-4C5F-B3E8-EB3CDBA7A6CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E40EAE9B-01F5-4C5F-B3E8-EB3CDBA7A6CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CE3A0FD4-6327-46CB-9AF8-774D47E1322F} = {34ED692A-077E-47F6-9449-9EA0CFF88A12}
+		{46E58A4B-0C2E-4300-AEF0-768FD3B69DDF} = {C21ED2CB-2424-4FEE-8B65-86F6D713ABC2}
+		{E10A672D-0654-4F2B-B02B-2060D0F434F1} = {297A030D-6E00-4A47-8C06-5AED8F7C923B}
+		{E40EAE9B-01F5-4C5F-B3E8-EB3CDBA7A6CE} = {297A030D-6E00-4A47-8C06-5AED8F7C923B}
 	EndGlobalSection
 EndGlobal

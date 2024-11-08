@@ -3,7 +3,7 @@ using DungeonHub.Backend.Models.Creature.Character;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using NSubstitute;
-using Test.TestExtensions;
+using TestHelpers;
 
 namespace Test.Backend.RepositoryTests;
 

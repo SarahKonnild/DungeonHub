@@ -2,7 +2,7 @@ using Microsoft.Extensions.Logging;
 using NSubstitute.Core;
 using Xunit;
 
-namespace Test.TestExtensions;
+namespace TestHelpers;
 
 public static class LogAsserts
 {

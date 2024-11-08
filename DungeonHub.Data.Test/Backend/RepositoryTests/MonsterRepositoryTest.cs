@@ -2,7 +2,7 @@ using DungeonHub.Backend.Models.Creature;
 using DungeonHub.Backend.Models.Creature.Monster;
 using Microsoft.Extensions.Logging;
 using NSubstitute;
-using Test.TestExtensions;
+using TestHelpers;
 
 namespace Test.Backend.RepositoryTests;
 

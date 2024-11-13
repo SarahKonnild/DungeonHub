@@ -1,3 +1,4 @@
+using DungeonHub.Contracts.Creature;
 using DungeonHub.Data.Models.Creature.Monster;
 using Microsoft.Extensions.Logging;
 
@@ -47,5 +48,11 @@ public partial class Repository
         }
         dungeonHubDbContext.Monsters.Remove(monster);
         dungeonHubDbContext.SaveChanges();
+    }
+
+    /// <inheritdoc />
+    public List<Monster> GetAllMonsters()
+    {
+        return dungeonHubDbContext.Monsters.ToList();
     }
 }

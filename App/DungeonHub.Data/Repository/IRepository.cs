@@ -35,6 +35,11 @@ public interface IRepository
     /// <param name="id">The ID of the monster to remove.</param>
     public void DeleteMonster(int id);
 
+    /// <summary>
+    ///     Get the list of all monsters.
+    /// </summary>
+    public List<Monster> GetAllMonsters();
+
     #endregion
     #region Player Characters
 

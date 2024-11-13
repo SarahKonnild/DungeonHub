@@ -1,20 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <OutputType>Library</OutputType>
         <TargetFramework>net8.0</TargetFramework>
-        <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
-
-    <ItemGroup>
-      <None Remove="Properties\launchSettings.json" />
-    </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\App\DungeonHub.Data\DungeonHub.Data.csproj" />
       <ProjectReference Include="..\DungeonHub.Contracts\DungeonHub.Contracts.csproj" />
-      <ProjectReference Include="..\DungeonHub.Mappers\DungeonHub.Mappers.csproj" />
     </ItemGroup>
 
 </Project>

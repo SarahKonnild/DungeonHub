@@ -2,3 +2,4 @@
 **/obj
 .idea
 DungeonHub.Backend/Data/*.json
+*.DotSettings.user

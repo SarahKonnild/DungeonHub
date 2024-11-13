@@ -1,15 +1,12 @@
 using System.IO.Abstractions;
-using DungeonHub.Backend;
-using DungeonHub.Persistence;
-using DataLoader = DungeonHub.Backend.DataLoader.DataLoader;
 
-namespace Test.Backend.DataLoaderTest;
+namespace DungeonHub.Data.Test.Backend.DataLoaderTest;
 
 public partial class DataLoaderTest : IDisposable
 {
     private readonly DungeonHubDbContext _dbContext;
     private readonly IFileSystem _fileSystem;
-    private readonly DataLoader _dataLoader;
+    private readonly DataLoader.DataLoader _dataLoader;
 
     public DataLoaderTest()
     {

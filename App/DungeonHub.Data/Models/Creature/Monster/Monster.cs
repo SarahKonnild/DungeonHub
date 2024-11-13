@@ -1,7 +1,6 @@
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DungeonHub.Backend.Models.Creature.Monster;
+namespace DungeonHub.Data.Models.Creature.Monster;
 
 public class Monster : Creature
 {

@@ -1,10 +1,10 @@
-using DungeonHub.Backend.Models.Creature;
-using DungeonHub.Backend.Models.Creature.Monster;
+using DungeonHub.Data.Models.Creature;
+using DungeonHub.Data.Models.Creature.Monster;
 using Microsoft.Extensions.Logging;
 using NSubstitute;
 using TestHelpers;
 
-namespace Test.Backend.RepositoryTests;
+namespace DungeonHub.Data.Test.Backend.RepositoryTests;
 
 public partial class RepositoryTest
 {
@@ -18,7 +18,7 @@ public partial class RepositoryTest
         _repository.CreateMonster(monster);
 
         // ASSERT
-        var monsters = _dungeonHubDbContext.Monsters.ToList();
+        var monsters = Enumerable.ToList<Monster>(_dungeonHubDbContext.Monsters);
         Assert.Contains(monsters, m => m.Name == monster.Name);
         Assert.Single(monsters);
     }
@@ -30,7 +30,7 @@ public partial class RepositoryTest
         _repository.GetMonsterById(1);
         
         // ASSERT
-        var receivedCalls = _loggerMock.ReceivedCalls().ToList();
+        var receivedCalls = SubstituteExtensions.ReceivedCalls<ILogger<Repository.Repository>>(_loggerMock).ToList();
         Assert.Single(receivedCalls);
         receivedCalls.First().AssertLoggedLevelAndMessage(LogLevel.Warning, "Could not find monster with ID 1.");
     }
@@ -53,7 +53,7 @@ public partial class RepositoryTest
         _repository.UpdateMonster(updatedMonster);
 
         // ASSERT
-        var monsters = _dungeonHubDbContext.Monsters.ToList();
+        var monsters = Enumerable.ToList<Monster>(_dungeonHubDbContext.Monsters);
     }
 
     private static Monster GetFrog()

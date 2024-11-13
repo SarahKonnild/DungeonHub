@@ -1,7 +1,7 @@
-using DungeonHub.Backend.Models.Creature.Character;
-using DungeonHub.Backend.Models.Creature.Monster;
+using DungeonHub.Data.Models.Creature.Character;
+using DungeonHub.Data.Models.Creature.Monster;
 
-namespace DungeonHub.Backend.Repository;
+namespace DungeonHub.Data.Repository;
 
 /// <summary>
 ///     Handles database interactions.

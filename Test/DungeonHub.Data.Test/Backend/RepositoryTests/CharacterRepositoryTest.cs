@@ -1,11 +1,12 @@
-using DungeonHub.Backend.Models.Creature;
-using DungeonHub.Backend.Models.Creature.Character;
+using System.Collections;
+using DungeonHub.Data.Models.Creature;
+using DungeonHub.Data.Models.Creature.Character;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using NSubstitute;
 using TestHelpers;
 
-namespace Test.Backend.RepositoryTests;
+namespace DungeonHub.Data.Test.Backend.RepositoryTests;
 
 public partial class RepositoryTest
 {
@@ -19,7 +20,7 @@ public partial class RepositoryTest
         _repository.CreatePlayerCharacter(playerCharacter);
 
         // ASSERT
-        var playerCharacters = _dungeonHubDbContext.PlayerCharacters.ToList();
+        var playerCharacters = Enumerable.ToList<PlayerCharacter>(_dungeonHubDbContext.PlayerCharacters);
         Assert.Contains(playerCharacters, x => x.Name == playerCharacter.Name);
         Assert.Single(playerCharacters);
     }
@@ -31,7 +32,7 @@ public partial class RepositoryTest
         _repository.GetPlayerCharacterById(1);
 
         // ASSERT
-        var receivedCalls = _loggerMock.ReceivedCalls().ToList();
+        var receivedCalls = SubstituteExtensions.ReceivedCalls<ILogger<Repository.Repository>>(_loggerMock).ToList();
         Assert.Single(receivedCalls);
         receivedCalls.First().AssertLoggedLevelAndMessage(LogLevel.Warning, "Could not find character with ID 1.");
     }
@@ -53,7 +54,7 @@ public partial class RepositoryTest
         _repository.UpdatePlayerCharacter(updatedCharacter);
 
         // ASSERT
-        var playerCharacters = _dungeonHubDbContext.PlayerCharacters.ToList();
+        var playerCharacters = Enumerable.ToList<PlayerCharacter>(_dungeonHubDbContext.PlayerCharacters);
         Assert.Contains(playerCharacters, x => x.Class == updatedCharacter.Class);
         Assert.Contains(playerCharacters, x => x.Level == updatedCharacter.Level);
         Assert.Contains(playerCharacters, x => x.Name == playerCharacter.Name);
@@ -71,7 +72,7 @@ public partial class RepositoryTest
         _repository.UpdatePlayerCharacter(playerCharacter);
 
         // ASSERT
-        var receivedCalls = _loggerMock.ReceivedCalls().ToList();
+        var receivedCalls = SubstituteExtensions.ReceivedCalls<ILogger<Repository.Repository>>(_loggerMock).ToList();
         Assert.Single(receivedCalls);
         receivedCalls.First().AssertLoggedLevelAndMessage(LogLevel.Warning, "Tried to update character with ID 1, but it was not found.");
     }
@@ -103,7 +104,7 @@ public partial class RepositoryTest
         _repository.DeletePlayerCharacter(1);
         
         // ASSERT
-        Assert.Empty(_dungeonHubDbContext.PlayerCharacters);
+        Assert.Empty((IEnumerable)_dungeonHubDbContext.PlayerCharacters);
     }
     
     [Fact]
@@ -113,7 +114,7 @@ public partial class RepositoryTest
         _repository.DeletePlayerCharacter(1);
 
         // ASSERT
-        var receivedCalls = _loggerMock.ReceivedCalls().ToList();
+        var receivedCalls = SubstituteExtensions.ReceivedCalls<ILogger<Repository.Repository>>(_loggerMock).ToList();
         Assert.Single(receivedCalls);
         receivedCalls.First().AssertLoggedLevelAndMessage(LogLevel.Warning, "Tried to remove character with ID 1, but it was not found.");
     }

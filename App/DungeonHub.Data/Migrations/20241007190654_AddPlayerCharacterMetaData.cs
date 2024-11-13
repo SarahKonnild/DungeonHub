@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace DungeonHub.Backend.Migrations
+namespace DungeonHub.Data.Migrations
 {
     /// <inheritdoc />
     public partial class AddPlayerCharacterMetaData : Migration

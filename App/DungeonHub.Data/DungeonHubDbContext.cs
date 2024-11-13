@@ -1,11 +1,11 @@
-using DungeonHub.Backend.Models.Creature;
-using DungeonHub.Backend.Models.Creature.Character;
-using DungeonHub.Backend.Models.Creature.Monster;
+using DungeonHub.Data.Models.Creature;
+using DungeonHub.Data.Models.Creature.Character;
+using DungeonHub.Data.Models.Creature.Monster;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace DungeonHub.Backend;
+namespace DungeonHub.Data;
 
 public class DungeonHubDbContext : IdentityDbContext<IdentityUser>
 {

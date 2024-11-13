@@ -1,8 +1,7 @@
-using DungeonHub.Backend.Models.Creature.Character;
-using Microsoft.EntityFrameworkCore;
+using DungeonHub.Data.Models.Creature.Character;
 using Microsoft.Extensions.Logging;
 
-namespace DungeonHub.Backend.Repository;
+namespace DungeonHub.Data.Repository;
 
 public partial class Repository
 {

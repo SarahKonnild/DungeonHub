@@ -1,4 +1,4 @@
-namespace DungeonHub.Backend.Models.Creature.Monster;
+namespace DungeonHub.Data.Models.Creature.Monster;
 
 public enum MonsterType
 {

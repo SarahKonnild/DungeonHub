@@ -1,5 +1,5 @@
 
-namespace DungeonHub.Backend.DataLoader;
+namespace DungeonHub.Data.DataLoader;
 
 public partial class DataLoader
 {

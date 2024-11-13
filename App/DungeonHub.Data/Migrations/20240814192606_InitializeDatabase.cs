@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace DungeonHub.Persistence.Migrations
+namespace DungeonHub.Data.Migrations
 {
     /// <inheritdoc />
     public partial class InitializeDatabase : Migration

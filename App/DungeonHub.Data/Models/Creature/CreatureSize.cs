@@ -1,4 +1,4 @@
-namespace DungeonHub.Backend.Models.Creature;
+namespace DungeonHub.Data.Models.Creature;
 
 public enum CreatureSize
 {

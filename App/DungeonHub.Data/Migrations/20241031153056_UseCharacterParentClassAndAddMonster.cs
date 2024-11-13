@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace DungeonHub.Backend.Migrations
+namespace DungeonHub.Data.Migrations
 {
     /// <inheritdoc />
     public partial class UseCharacterParentClassAndAddMonster : Migration

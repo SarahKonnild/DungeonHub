@@ -1,8 +1,7 @@
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Identity;
 
-namespace DungeonHub.Backend.Models.Creature.Character;
+namespace DungeonHub.Data.Models.Creature.Character;
 
 public class PlayerCharacter : Creature
 {

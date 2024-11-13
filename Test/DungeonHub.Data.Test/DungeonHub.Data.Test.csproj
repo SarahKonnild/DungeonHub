@@ -7,7 +7,7 @@
 
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
-        <RootNamespace>Test</RootNamespace>
+        <RootNamespace>DungeonHub.Data.Test</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

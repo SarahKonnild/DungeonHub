@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DungeonHub.Backend.Models.Creature;
+namespace DungeonHub.Data.Models.Creature;
 
 public abstract class Creature
 {

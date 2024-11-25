@@ -19,10 +19,10 @@ public class MonsterHub(IRepository repository) : Hub
     {
         var monsterModel = monster.MapToModel();
         repository.CreateMonster(monsterModel);
-        await UpdateMonsters();
+        await UpdateMonsterList();
     }
 
-    private async Task UpdateMonsters()
+    private async Task UpdateMonsterList()
     {
         var monstersList = repository.GetAllMonsters().MapToContracts();
         await Clients.All.SendAsync("UpdateMonsters", monstersList);

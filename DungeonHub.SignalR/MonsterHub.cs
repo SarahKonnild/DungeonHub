@@ -22,6 +22,14 @@ public class MonsterHub(IRepository repository) : Hub
         await UpdateMonsterList();
     }
 
+    /// <summary>
+    ///     Get the list of monsters from the database.
+    /// </summary>
+    public async Task GetMonsters()
+    {
+        await UpdateMonsterList();
+    }
+
     private async Task UpdateMonsterList()
     {
         var monstersList = repository.GetAllMonsters().MapToContracts();

@@ -1,8 +1,23 @@
 @page "/monsters"
+@using MudBlazor
 @rendermode InteractiveServer
 
-<h1>Monsters</h1>
+<PageTitle>Monsters</PageTitle>
 
-@code {
-    
-}
+<MudPaper Elevation="0" >
+    <MudText Typo="Typo.h3">Monsters</MudText>
+    <MudTable T="ViewModels.Monster" Items="@Monsters">
+        <HeaderContent>
+            <MudTh>Name</MudTh>
+            <MudTh>Type</MudTh>
+            <MudTh>Combat Rating</MudTh>
+            <MudTh>Is Custom</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="Name">@context.Name</MudTd>
+            <MudTd DataLabel="Type">@context.MonsterType</MudTd>
+            <MudTd DataLabel="Combat-Rating">@context.CombatRating</MudTd>
+            <MudTd DataLabel="IsCustom">@context.Custom</MudTd>
+        </RowTemplate>
+    </MudTable>
+</MudPaper>
